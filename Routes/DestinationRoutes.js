@@ -6,4 +6,8 @@ router.get("/", (request, result) => {
     DestinationController.getAllDestination(request, result);
 });
 
+router.get("/:id", (request, result) => {
+    DestinationController.getDestinationById(request, result);
+  });
+
 module.exports = router;

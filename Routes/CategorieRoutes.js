@@ -3,7 +3,11 @@ const CategorieController = require("../Controllers/CategorieController");
 const router = express.Router();
 
 router.get("/", (request, result) => {
-    CategorieController.getAllCategorie(request, result);
+  CategorieController.getAllCategorie(request, result);
+});
+
+router.get("/:id", (request, result) => {
+  CategorieController.getCategorieById(request, result);
 });
 
 module.exports = router;
