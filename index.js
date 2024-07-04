@@ -3,6 +3,7 @@ const clientRoutes = require('./Routes/ClientRoutes');
 const categorieRoutes = require('./Routes/CategorieRoutes');
 const destinationRoutes = require('./Routes/DestinationRoutes');
 const paiementRoutes = require('./Routes/PaiementRoutes');
+const reservationRoutes = require('./Routes/ReservationRoutes');
 const app = express();
 const port = 3001;
 
@@ -22,6 +23,7 @@ app.use('/clients', clientRoutes);
 app.use('/categories', categorieRoutes);
 app.use('/destinations', destinationRoutes);
 app.use('/paiements', paiementRoutes);
+app.use('/reservations', reservationRoutes);
 
 //Premier parametre est le port sur lequel le serveur va écouter
 //Deuxieme parametre est la fonction fléché qui est faite uniquement au lancement du serveur
