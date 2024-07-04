@@ -10,6 +10,10 @@ class CategorieService {
     return await Categorie.findByPk(categorieId);
   }
 
+  async addCategorie(categorie){
+    return await Categorie.create(categorie);
+  }
+
 }
 
 module.exports = new CategorieService();

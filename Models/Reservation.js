@@ -3,7 +3,7 @@ const sequelize = require('../Config/Sequelize');
 
 class Reservation extends Model {}
 
-Paiement.init({
+Reservation.init({
     RE_ID: {
         type: DataTypes.INTEGER,
         primaryKey: true,

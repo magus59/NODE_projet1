@@ -10,4 +10,8 @@ router.get("/:id", (request, result) => {
   ReservationController.getReservationById(request, result);
 });
 
+router.post("/", (request, result) => {
+  ReservationController.addReservation(request, result);
+});
+
 module.exports = router;

@@ -1,4 +1,4 @@
-const Reservation = require("../Models/Paiement");
+const Reservation = require("../Models/Reservation");
 
 class ReservationService {
   async getAllReservation() {
@@ -7,6 +7,10 @@ class ReservationService {
 
   async getReservationById(reservationId) {
     return await Reservation.findByPk(reservationId);
+  }
+
+  async addReservation(reservation){
+    return await Reservation.create(reservation);
   }
 }
 

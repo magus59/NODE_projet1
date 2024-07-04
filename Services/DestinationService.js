@@ -9,6 +9,10 @@ class DestinationService {
   async getDestinationById(destinationId) {
     return await Destination.findByPk(destinationId);
   }
+
+  async addDestination(destination){
+    return await Destination.create(destination);
+  }
 }
 
 module.exports = new DestinationService();

@@ -10,4 +10,8 @@ router.get("/:id", (request, result) => {
   CategorieController.getCategorieById(request, result);
 });
 
+router.post("/", (request, result) => {
+  CategorieController.addCategorie(request, result);
+});
+
 module.exports = router;

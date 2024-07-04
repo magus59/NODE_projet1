@@ -10,4 +10,9 @@ router.get("/:id", (request, result) => {
   ClientController.getClientById(request, result);
 });
 
+router.post("/", (request, result) => {
+  ClientController.addClient(request, result);
+});
+
+
 module.exports = router;
