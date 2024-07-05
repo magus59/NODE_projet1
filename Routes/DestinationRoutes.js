@@ -18,4 +18,8 @@ router.patch("/:id", (request, result) => {
   DestinationController.updateDestination(request, result);
 });
 
+router.delete("/:id", (request, result) => {
+  DestinationController.deleteDestination(request, result);
+});
+
 module.exports = router;

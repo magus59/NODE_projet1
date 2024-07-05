@@ -18,4 +18,8 @@ router.patch("/:id", (request, result) => {
   PaiementController.updatePaiement(request, result);
 });
 
+router.delete("/:id", (request, result) => {
+  PaiementController.deletePaiement(request, result);
+});
+
 module.exports = router;

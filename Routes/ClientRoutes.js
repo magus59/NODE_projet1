@@ -18,5 +18,8 @@ router.patch("/:id", (request, result) => {
   ClientController.updateClient(request, result);
 });
 
+router.delete("/:id", (request, result) => {
+  ClientController.deleteClient(request, result);
+});
 
 module.exports = router;

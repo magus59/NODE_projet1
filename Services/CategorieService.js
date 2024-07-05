@@ -23,6 +23,14 @@ class CategorieService {
     });
   }
 
+  async deleteCategorie(id){
+    return await Categorie.destroy({
+      where : {
+        CA_ID : id
+      }
+    });
+  }
+
 
 }
 

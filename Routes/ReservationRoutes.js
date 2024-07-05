@@ -18,4 +18,8 @@ router.patch("/:id", (request, result) => {
   ReservationController.updateReservation(request, result);
 });
 
+router.delete("/:id", (request, result) => {
+  ReservationController.deleteReservation(request, result);
+});
+
 module.exports = router;

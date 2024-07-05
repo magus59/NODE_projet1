@@ -18,4 +18,7 @@ router.patch("/:id", (request, result) => {
   CategorieController.updateCategorie(request, result);
 });
 
+router.delete("/:id", (request, result) => {
+  CategorieController.deleteCategorie(request, result);
+});
 module.exports = router;
