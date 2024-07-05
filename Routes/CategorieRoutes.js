@@ -14,4 +14,8 @@ router.post("/", (request, result) => {
   CategorieController.addCategorie(request, result);
 });
 
+router.patch("/:id", (request, result) => {
+  CategorieController.updateCategorie(request, result);
+});
+
 module.exports = router;

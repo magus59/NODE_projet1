@@ -14,4 +14,8 @@ router.post("/", (request, result) => {
   PaiementController.addPaiement(request, result);
 });
 
+router.patch("/:id", (request, result) => {
+  PaiementController.updatePaiement(request, result);
+});
+
 module.exports = router;

@@ -33,6 +33,16 @@ class ReservationController {
             result.json({error : "Une erreur est survenue lors de l'ajout du reservation"})
         }
     }
+
+    async updateReservation(request, result){
+        try {
+            const reservation = await ReservationService.updateReservation(request.params.id, request.body);
+            result.json(reservation);
+        } catch (error) {
+            result.status(500);
+            result.json({error : "Une erreur est survenue lors de la modification de la reservation"})
+        }
+    }
 }
 
 module.exports = new ReservationController();

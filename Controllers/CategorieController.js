@@ -32,6 +32,16 @@ class CategorieController {
             result.json({error : "Une erreur est survenue lors de l'ajout de la categorie"})
         }
     }
+
+    async updateCategorie(request, result){
+        try {
+            const categorie = await CategorieService.updateCategorie(request.params.id, request.body);
+            result.json(categorie);
+        } catch (error) {
+            result.status(500);
+            result.json({error : "Une erreur est survenue lors de la modification de la categorie"})
+        }
+    }
 }
 
 module.exports = new CategorieController();

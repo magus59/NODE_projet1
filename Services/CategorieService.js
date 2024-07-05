@@ -1,3 +1,4 @@
+const { where } = require("sequelize");
 const Categorie = require("../Models/Categorie");
 
 class CategorieService {
@@ -13,6 +14,15 @@ class CategorieService {
   async addCategorie(categorie){
     return await Categorie.create(categorie);
   }
+
+  async updateCategorie(id, categorie){
+    return await Categorie.update(categorie, {
+      where : {
+        CA_ID : id
+      }
+    });
+  }
+
 
 }
 

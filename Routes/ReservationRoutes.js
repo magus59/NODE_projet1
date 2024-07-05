@@ -14,4 +14,8 @@ router.post("/", (request, result) => {
   ReservationController.addReservation(request, result);
 });
 
+router.patch("/:id", (request, result) => {
+  ReservationController.updateReservation(request, result);
+});
+
 module.exports = router;

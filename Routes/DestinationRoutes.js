@@ -14,4 +14,8 @@ router.post("/", (request, result) => {
   DestinationController.addDestination(request, result);
 });
 
+router.patch("/:id", (request, result) => {
+  DestinationController.updateDestination(request, result);
+});
+
 module.exports = router;

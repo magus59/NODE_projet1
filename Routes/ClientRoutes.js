@@ -14,5 +14,9 @@ router.post("/", (request, result) => {
   ClientController.addClient(request, result);
 });
 
+router.patch("/:id", (request, result) => {
+  ClientController.updateClient(request, result);
+});
+
 
 module.exports = router;
