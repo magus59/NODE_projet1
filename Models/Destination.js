@@ -41,4 +41,7 @@ Destination.init({
     timestamps: false
 });
 
+Categorie.hasMany(Destination, {as:'destination', foreignKey: 'CA_ID'});
+Destination.belongsTo(Categorie, {as:'categorie', foreignKey:'CA_ID'});
+
 module.exports = Destination;

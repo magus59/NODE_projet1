@@ -7,7 +7,8 @@ class ClientService {
   }
 
   async getClientById(clientId) {
-    return await Client.findByPk(clientId);
+    // on ajoute :  {include : 'reservations'} pour faire le lien avec la table d'association
+    return await Client.findByPk(clientId, {include : 'reservations'});
   }
 
   async addClient(client){

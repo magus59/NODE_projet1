@@ -3,11 +3,11 @@ const Destination = require("../Models/Destination");
 class DestinationService {
 
   async getAllDestination() {
-    return await Destination.findAll();
+    return await Destination.findAll({include:'categorie'});
   }
 
   async getDestinationById(destinationId) {
-    return await Destination.findByPk(destinationId);
+    return await Destination.findByPk(destinationId, {include : ['reservations', 'categorie']});
   }
 
   async addDestination(destination){
