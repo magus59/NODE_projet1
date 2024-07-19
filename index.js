@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const clientRoutes = require('./Routes/ClientRoutes');
 const categorieRoutes = require('./Routes/CategorieRoutes');
 const destinationRoutes = require('./Routes/DestinationRoutes');
@@ -8,6 +9,7 @@ const app = express();
 const port = 3001;
 
 app.use(express.json());
+app.use(cors());
 
 // 5 types de requetes possibles => GET, POST, PUT, DELETE, PATCH
 
